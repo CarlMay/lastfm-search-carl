@@ -6,14 +6,17 @@ import {
     StreamShowFavorites,
 } from "./streams";
 
+import Header from "./header";
+
 const App = () => {
     return (
         <div className={'ui container'}>
             <BrowserRouter>
-
-                <Route path={'/'} exact component={StreamShowFavorites} />
-                <Route path={'/search/last-fm'} exact component={StreamSearchLastFM} />
-                <Route path={'/search/brainz'} exact component={StreamSearchBrainz} />
+                <Header />
+                <Route path={'/'} exact component={StreamSearchLastFM} />
+                <Route path={'/last-fm'} exact component={StreamSearchLastFM} />
+                <Route path={'/brainz'} exact component={StreamSearchBrainz} />
+                <Route path={'/favorites'} exact component={StreamShowFavorites} />
             </BrowserRouter>
         </div>
     );
