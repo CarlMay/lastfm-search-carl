@@ -1,18 +1,39 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {searchReleases} from '../actions';
 
-const ReleaseDetails = (props) => {
+class ReleaseDetails extends Component {
 
-    console.log('---ReleaseDetails', props);
+    componentDidMount() {
+        this.props.searchReleases(this.props.artistId);
+    }
 
-    return(
-        <div>
-            <div className="ui container grid">
-                <div className="three wide column">date</div>
-                <div className="three wide column">title</div>
-                <div className="three wide column">title</div>
+    render(){
+        console.log('---ReleaseDetails', this.props);
+
+        return(
+            <div>
+                <div className="ui container grid">
+                    <div className="one wide column">Star</div>
+                    <div className="two wide column">Year</div>
+                    <div className="three wide column">Title</div>
+                    <div className="three wide column">Release label</div>
+                    <div className="three wide column">Number of tracks</div>
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
+}
+
+
+const mapStateToProps = (state) => {
+    return {
+        releases: state.mindz.releases,
+    };
 };
 
-export default ReleaseDetails;
+
+export default connect(
+    mapStateToProps,
+    {searchReleases}
+)(ReleaseDetails);

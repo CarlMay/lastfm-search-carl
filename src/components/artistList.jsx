@@ -3,7 +3,7 @@ import ArtistItem from './artistItem';
 
 const ArtistList = (props) => {
     const artistData = props.artists.map((artist) => {
-        return <ArtistItem key={artist.id} artists={artist}  />;
+        return <ArtistItem key={artist.id} artists={artist} />;
     });
 
     console.log('---ArtistList artists', props.artists);

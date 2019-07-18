@@ -5,10 +5,15 @@ import SearchBar from '../searchBar';
 import ArtistList from '../artistList';
 
 import {connect} from 'react-redux';
-import {searchReleases, searchArtist} from '../../actions';
+import {searchArtist} from '../../actions';
 
 
 class StreamSearchBrainz extends Component {
+
+    state = {
+        term: '',
+    };
+
     constructor(props) {
         super(props);
         this.onSearchSubmit = this.onSearchSubmit.bind(this);
@@ -35,7 +40,7 @@ class StreamSearchBrainz extends Component {
                 <h1 className={'ui header'}>Search MusicBrainz</h1>
                 <SearchBar onSubmit={this.onSearchSubmit}/>
                 {hasReleaseData &&
-                <ArtistList artists={artists}/>
+                <ArtistList artists={artists} />
                 }
             </ContentContainer>)
     }
@@ -50,7 +55,7 @@ const mapStateToProps = (state) => {
 
 export default connect(
     mapStateToProps,
-    {searchReleases, searchArtist}
+    {searchArtist}
 )(StreamSearchBrainz);
 
 

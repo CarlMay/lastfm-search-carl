@@ -11,15 +11,15 @@ import {
     DELETE_STREAM,
 } from './types';
 
-export const searchReleases = (term) => async (dispatch) => {
-    // const response = await mindz.put(`release/?/${term}`);
-    const response = await mindz.get('release/?', {
-        params: {query: term},
-    });
+export const searchReleases = (artistId) => async (dispatch) => {
+    const response = await mindz.get(`artist/${artistId}?inc=release-groups`);
+
+    console.log('---SEARCH_RELEASES', response);
+    console.log('---SEARCH_RELEASES::: release-groups', response.data['release-groups']);
 
     dispatch({
         type: SEARCH_RELEASES,
-        payload: response.data
+        payload: response.data['release-groups']
     });
 };
 
@@ -45,7 +45,7 @@ export const createStream = (formValues) => async (dispatch) => {
 };
 
 export const fetchStreams = () => async (dispatch) => {
-    const response = await streams.post('/streams', );
+    const response = await streams.post('/streams',);
 
     dispatch({
         type: FETCH_STREAMS,
@@ -54,7 +54,7 @@ export const fetchStreams = () => async (dispatch) => {
 };
 
 export const deleteStream = (id) => async (dispatch) => {
-    const response = await streams.delete(`/streams/${id}` );
+    const response = await streams.delete(`/streams/${id}`);
 
     dispatch({
         type: DELETE_STREAM,

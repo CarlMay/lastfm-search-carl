@@ -12,7 +12,7 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case SEARCH_RELEASES: {
-            const data = action.payload.releases;
+            const data = action.payload;
             return {...state, releases: data};
         }
         case SEARCH_ARTIST: {
