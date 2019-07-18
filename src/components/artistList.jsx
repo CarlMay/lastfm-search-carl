@@ -1,10 +1,12 @@
 import React from 'react';
-import ReleaseItem from './releaseItem';
+import ArtistItem from './artistItem';
 
-const ReleaseList = (props) => {
-    const releaseData = props.releases.map((release) => {
-        return <ReleaseItem key={release.id} release={release}  />;
+const ArtistList = (props) => {
+    const artistData = props.artists.map((artist) => {
+        return <ArtistItem key={artist.id} artists={artist}  />;
     });
+
+    console.log('---ArtistList artists', props.artists);
 
     const headerStyle = {
         marginTop: '2rem',
@@ -27,9 +29,9 @@ const ReleaseList = (props) => {
         <div>
             <h3 className={'ui header'} style={headerStyle}>Search Results:</h3>
             <p style={titleStyle}>Artist Name</p>
-            <div style={listContainerStyle}>{releaseData}</div>
+            <div style={listContainerStyle}>{artistData}</div>
         </div>
     );
 };
 
-export default ReleaseList;
+export default ArtistList;

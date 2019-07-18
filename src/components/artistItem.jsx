@@ -1,6 +1,7 @@
 import React from 'react';
+import ReleaseDetail from './releaseDetails';
 
-class ReleaseItem extends React.Component {
+class ArtistItem extends React.Component {
     state = {
         isOpen: false,
     };
@@ -10,10 +11,6 @@ class ReleaseItem extends React.Component {
         this.handleAccordionOpen = this.handleAccordionOpen.bind(this);
     }
 
-    // const releaseData = props.releases.map((release) => {
-    //     return <ImageCard key={release.id} release={release}  />;
-    // });
-
     handleAccordionOpen() {
         console.log('--handleAccordionOpen', this.state.isOpen);
         this.setState({isOpen: !this.state.isOpen});
@@ -21,10 +18,12 @@ class ReleaseItem extends React.Component {
 
     render() {
 
-        const {release} = this.props;
-        const {title, date} = release;
+        const {artists} = this.props;
+        const {name, id} = artists;
         const {isOpen} = this.state;
-        console.log('---releaseItem', release);
+
+        const title = 'title';
+        const date = 'date';
 
         const accordionText = (isOpen) ? 'Hide' : 'Show';
 
@@ -50,29 +49,16 @@ class ReleaseItem extends React.Component {
         return (
             <div className="ui container">
                 <div className="ui container grid" style={listStyle}>
-                    <div className="nine wide column">{title}</div>
+                    <div className="nine wide column">{name}</div>
                     <div className="three wide column" style={showReleaseBlockStyle}>
                         <span onClick={this.handleAccordionOpen}
                               style={showReleaseStyle}>{`${accordionText} Releases`}</span>
                     </div>
                 </div>
-                {isOpen &&
-                <div>
-                    <div className="ui container grid">
-                        <div className="three wide column">{date}</div>
-                        <div className="three wide column">{title}</div>
-                        <div className="three wide column">{title}</div>
-                    </div>
-                    <div className="ui container grid">
-                        <div className="three wide column">{date}</div>
-                        <div className="three wide column">{title}</div>
-                        <div className="three wide column">{title}</div>
-                    </div>
-                </div>
-                }
+                {isOpen && <ReleaseDetail artistId={id} />}
             </div>
         );
     }
 }
 
-export default ReleaseItem;
+export default ArtistItem;

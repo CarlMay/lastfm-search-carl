@@ -1,44 +1,57 @@
 import React, {Component} from 'react';
-import minds from '../../apis/minds';
+// import mindz from '../../apis/mindz';
 import ContentContainer from "../ui/content-container";
 import SearchBar from '../searchBar';
-import ReleaseList from '../releaseList';
+import ArtistList from '../artistList';
+
+import {connect} from 'react-redux';
+import {searchReleases, searchArtist} from '../../actions';
 
 
 class StreamSearchBrainz extends Component {
-    state = {
-        releases: [],
-    };
-
     constructor(props) {
         super(props);
         this.onSearchSubmit = this.onSearchSubmit.bind(this);
     }
 
 
-    async onSearchSubmit(term) {
-        const response = await minds.get('release/?', {
-            params: {query: term},
-        });
-        this.setState({releases: response.data.releases});
+    // async onSearchSubmit(term) {
+    //     const response = await mindz.get('release/?', {
+    //         params: {query: term},
+    //     });
+    //     this.setState({artists: response.data.artists});
+    // }
+
+    onSearchSubmit(term){
+        this.props.searchArtist(term);
     }
 
     render() {
-        const {releases} = this.state;
-        const hasReleaseData = !!(releases && releases.length > 0);
+        const {artists} = this.props;
+        const hasReleaseData = !!(artists && artists.length > 0);
 
         return (
             <ContentContainer>
                 <h1 className={'ui header'}>Search MusicBrainz</h1>
                 <SearchBar onSubmit={this.onSearchSubmit}/>
                 {hasReleaseData &&
-                <ReleaseList releases={releases}/>
+                <ArtistList artists={artists}/>
                 }
             </ContentContainer>)
     }
 }
 
-export default StreamSearchBrainz;
+const mapStateToProps = (state) => {
+    return {
+        artists: state.mindz.artists,
+    };
+};
+
+
+export default connect(
+    mapStateToProps,
+    {searchReleases, searchArtist}
+)(StreamSearchBrainz);
 
 
 
