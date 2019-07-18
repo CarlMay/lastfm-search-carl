@@ -22,9 +22,6 @@ class ArtistItem extends React.Component {
         const {name, id} = artists;
         const {isOpen} = this.state;
 
-        const title = 'title';
-        const date = 'date';
-
         const accordionText = (isOpen) ? 'Hide' : 'Show';
 
         const listStyle = {
@@ -52,7 +49,9 @@ class ArtistItem extends React.Component {
                     <div className="nine wide column">{name}</div>
                     <div className="three wide column" style={showReleaseBlockStyle}>
                         <span onClick={this.handleAccordionOpen}
-                              style={showReleaseStyle}>{`${accordionText} Releases`}</span>
+                              style={showReleaseStyle}>
+                            {`${accordionText} Releases`}
+                        </span>
                     </div>
                 </div>
                 {isOpen && <ReleaseDetail artistId={id} />}
