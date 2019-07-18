@@ -1,0 +1,4 @@
+Application name	MusicSearch
+API key	850a15314ce90b4721eb773a648ba8bb
+Shared secret	2728e0fb38ae37d7768c618f0124fda1
+Registered to	Hitman4t7
