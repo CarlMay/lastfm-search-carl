@@ -1,25 +1,24 @@
-import streams from '../apis/streams';
+// import streams from '../apis/streams';
 import mindz from '../apis/mindz';
 
 import {
-    SIGN_IN,
-    SIGN_OUT,
-    CREATE_STREAM,
+    // SIGN_IN,
+    // SIGN_OUT,
+    // CREATE_STREAM,
     SEARCH_RELEASES,
     SEARCH_ARTIST,
-    FETCH_STREAMS,
-    DELETE_STREAM,
+    // FETCH_STREAMS,
+    // DELETE_STREAM,
 } from './types';
 
 export const searchReleases = (artistId) => async (dispatch) => {
-    const response = await mindz.get(`artist/${artistId}?inc=release-groups`);
+    const response = await mindz.get(`release/?query=arid:${artistId}`);
 
-    console.log('---SEARCH_RELEASES', response);
-    console.log('---SEARCH_RELEASES::: release-groups', response.data['release-groups']);
+    console.log('---SEARCH_RELEASES::: release-groups', response.data.releases);
 
     dispatch({
         type: SEARCH_RELEASES,
-        payload: response.data['release-groups']
+        payload: response.data.releases
     });
 };
 
@@ -35,29 +34,29 @@ export const searchArtist = (term) => async (dispatch) => {
     });
 };
 
-export const createStream = (formValues) => async (dispatch) => {
-    const response = await streams.post('/streams', formValues);
+// export const createStream = (formValues) => async (dispatch) => {
+//     const response = await streams.post('/streams', formValues);
+//
+//     dispatch({
+//         type: CREATE_STREAM,
+//         payload: response.data
+//     });
+// };
 
-    dispatch({
-        type: CREATE_STREAM,
-        payload: response.data
-    });
-};
+// export const fetchStreams = () => async (dispatch) => {
+//     const response = await streams.post('/streams',);
+//
+//     dispatch({
+//         type: FETCH_STREAMS,
+//         payload: response.data
+//     });
+// };
 
-export const fetchStreams = () => async (dispatch) => {
-    const response = await streams.post('/streams',);
-
-    dispatch({
-        type: FETCH_STREAMS,
-        payload: response.data
-    });
-};
-
-export const deleteStream = (id) => async (dispatch) => {
-    const response = await streams.delete(`/streams/${id}`);
-
-    dispatch({
-        type: DELETE_STREAM,
-        payload: id
-    });
-};
+// export const deleteStream = (id) => async (dispatch) => {
+//     const response = await streams.delete(`/streams/${id}`);
+//
+//     dispatch({
+//         type: DELETE_STREAM,
+//         payload: id
+//     });
+// };

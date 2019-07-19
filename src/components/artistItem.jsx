@@ -29,7 +29,9 @@ class ArtistItem extends React.Component {
             display: 'flex',
             justifyContent: 'space-between',
             borderBottom: 'solid 1px #ccc',
-            boxSizing: 'content-box'
+            boxSizing: 'content-box',
+            marginTop: 0,
+            marginBottom: 0,
         };
 
         const showReleaseStyle = {
