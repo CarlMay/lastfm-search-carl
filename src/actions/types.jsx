@@ -1,7 +1,9 @@
 // export const SIGN_IN = 'SIGN_IN';
 // export const SIGN_OUT = 'SIGN_OUT';
+export const ADD_ARTIST_TO_SHORTLIST = 'ADD_ARTIST_TO_SHORTLIST';
 export const SEARCH_RELEASES = 'SEARCH_RELEASES';
 export const SEARCH_ARTIST = 'SEARCH_ARTIST';
+export const SEARCH_LAST_FM_ARTIST = 'SEARCH_LAST_FM_ARTIST';
 // export const DELETE_STREAM = 'DELETE_STREAM';
 // export const FETCH_STREAM = 'FETCH_STREAM';
 // export const FETCH_STREAMS = 'FETCH_STREAMS';

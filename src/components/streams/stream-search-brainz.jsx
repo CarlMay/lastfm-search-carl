@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import mindz from '../../apis/mindz';
 import ContentContainer from "../ui/content-container";
 import SearchBar from '../searchBar';
 import ArtistList from '../artistList';

@@ -1,5 +1,7 @@
 // import streams from '../apis/streams';
 import mindz from '../apis/mindz';
+import lastFm from '../apis/last-fm';
+// import lastFmAuth from '../apis/last-fm-auth';
 
 import {
     // SIGN_IN,
@@ -7,14 +9,41 @@ import {
     // CREATE_STREAM,
     SEARCH_RELEASES,
     SEARCH_ARTIST,
+    SEARCH_LAST_FM_ARTIST,
+    ADD_ARTIST_TO_SHORTLIST,
     // FETCH_STREAMS,
     // DELETE_STREAM,
 } from './types';
 
+
+// Last.fm API
+export const searchLastFmArtist = (artist) => async (dispatch) => {
+    const key = '850a15314ce90b4721eb773a648ba8bb';
+    const response = await lastFm.get(`?method=artist.search&artist=${artist}&api_key=${key}&format=json`);
+    const data = response.data.results.artistmatches.artist;
+
+    // console.log('---SEARCH_LAST_FM_ARTIST::: data', data);
+
+    dispatch({
+        type: SEARCH_LAST_FM_ARTIST,
+        payload: data
+    });
+};
+
+export const addToLastFmShortlist = (artist) => (dispatch) => {
+    console.log('---addToLastFmShortlist::: artist', artist);
+
+    dispatch({
+        type: ADD_ARTIST_TO_SHORTLIST,
+        payload: artist
+    });
+};
+
+
+
+// MusicMindz API
 export const searchReleases = (artistId) => async (dispatch) => {
     const response = await mindz.get(`release/?query=arid:${artistId}`);
-
-    console.log('---SEARCH_RELEASES::: release-groups', response.data.releases);
 
     dispatch({
         type: SEARCH_RELEASES,
@@ -23,7 +52,6 @@ export const searchReleases = (artistId) => async (dispatch) => {
 };
 
 export const searchArtist = (term) => async (dispatch) => {
-    // const response = await mindz.put(`release/?/${term}`);
     const response = await mindz.get('artist/?', {
         params: {query: term},
     });
