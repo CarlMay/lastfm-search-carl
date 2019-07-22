@@ -18,7 +18,6 @@ class StreamSearchLastFM extends Component {
     }
 
     onSearchSubmit(term){
-        console.log('---onSearchSubmit', term);
         this.props.searchLastFmArtist(term);
     }
 

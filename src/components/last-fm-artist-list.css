@@ -16,6 +16,7 @@
 .artist-list > .artist-name {
     flex: 1;
     margin-left: 1rem;
+    color: #337ab7;
 }
 
 .artist-list > button.button.circular.icon {

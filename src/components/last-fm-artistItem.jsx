@@ -13,7 +13,6 @@ class LastFmArtistItem extends React.Component {
     }
 
     handleAddToShortList() {
-        console.log('--handleAddToShortList', this.props.artists);
         this.props.addToShortlist(this.props.artists);
     };
 

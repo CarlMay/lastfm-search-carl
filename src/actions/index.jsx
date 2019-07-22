@@ -11,6 +11,7 @@ import {
     SEARCH_ARTIST,
     SEARCH_LAST_FM_ARTIST,
     ADD_ARTIST_TO_SHORTLIST,
+    FETCH_SHORTLIST,
     // FETCH_STREAMS,
     // DELETE_STREAM,
 } from './types';
@@ -22,8 +23,6 @@ export const searchLastFmArtist = (artist) => async (dispatch) => {
     const response = await lastFm.get(`?method=artist.search&artist=${artist}&api_key=${key}&format=json`);
     const data = response.data.results.artistmatches.artist;
 
-    // console.log('---SEARCH_LAST_FM_ARTIST::: data', data);
-
     dispatch({
         type: SEARCH_LAST_FM_ARTIST,
         payload: data
@@ -31,13 +30,19 @@ export const searchLastFmArtist = (artist) => async (dispatch) => {
 };
 
 export const addToLastFmShortlist = (artist) => (dispatch) => {
-    console.log('---addToLastFmShortlist::: artist', artist);
-
     dispatch({
         type: ADD_ARTIST_TO_SHORTLIST,
         payload: artist
     });
 };
+
+export const fetchLastFmShortlist = () => (dispatch) => {
+    dispatch({
+        type: FETCH_SHORTLIST,
+    });
+};
+
+
 
 
 

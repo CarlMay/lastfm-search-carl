@@ -1,6 +1,6 @@
 import {
     SEARCH_LAST_FM_ARTIST,
-    ADD_ARTIST_TO_SHORTLIST,
+    ADD_ARTIST_TO_SHORTLIST, FETCH_SHORTLIST,
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -15,6 +15,9 @@ export default (state = INITIAL_STATE, action) => {
             // console.log('---SEARCH_LAST_FM_ARTIST', action.payload);
             const data = action.payload;
             return {...state, artists: data};
+        }
+        case FETCH_SHORTLIST: {
+            return {...state};
         }
         case ADD_ARTIST_TO_SHORTLIST: {
             // console.log('---ADD_ARTIST_TO_SHORTLIST', action.payload, state.shortlist);
