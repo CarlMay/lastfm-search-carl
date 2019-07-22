@@ -23,9 +23,6 @@ class LastFmArtistList extends Component {
 
     render() {
         const {artists, addToShortlist, shortlist} = this.props;
-        const {showShortList} = this.state;
-
-        const hasShortlist = !!(shortlist.length > 0);
 
         const artistData = artists.map((artist, index) => {
             return <LastFmArtistItem key={index} artists={artist} addToShortlist={addToShortlist}/>;
@@ -40,12 +37,6 @@ class LastFmArtistList extends Component {
             marginBottom: '2rem',
         };
 
-        const buttonStyle = {
-            display: 'flex',
-            flex: '1 1 auto',
-            justifyContent: 'flex-end'
-        };
-
         const titleStyle = {
             borderBottom: 'solid 1px #eee',
             paddingBottom: '0.5rem',
@@ -58,10 +49,7 @@ class LastFmArtistList extends Component {
         return (
             <div>
                 <h3 className={'ui header'} style={headerStyle}>Search Results:</h3>
-                <div style={buttonStyle}>
-                    <button className={'ui basic button mini'} disabled={!hasShortlist} onClick={this.toggleShortlist}>Show short-list</button>
-                </div>
-                {showShortList && <ShortList shortlist={shortlist}/>}
+                <ShortList shortlist={shortlist} />
                 <p style={titleStyle}>Artist Name</p>
                 <div style={listContainerStyle}>{artistData}</div>
             </div>
