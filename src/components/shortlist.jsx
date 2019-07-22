@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Header, Modal} from 'semantic-ui-react'
+import {connect} from "react-redux";
+import {fetchLastFmShortlist} from "../actions";
 
 
 class ShortList extends Component {
@@ -115,5 +117,15 @@ class ShortList extends Component {
     }
 }
 
-export default ShortList;
+const mapStateToProps = (state) => {
+    return {
+        shortlist: state.lastFm.shortlist,
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    {fetchLastFmShortlist}
+)(ShortList);
+
 

@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4289a07-09d4-48d3-a51c-96d8e3ad502c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/shortlist.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/types.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/last-fm-artist-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/last-fm-artist-list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/last-fm-artistItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/last-fm-artistItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/last-fm-artistList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/last-fm-artistList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shortlist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shortlist.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,14 +15,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6612803">
+    <splitter split-orientation="horizontal" split-proportion="0.66998136">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="576">
-                  <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+                <state relative-caret-position="360">
+                  <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -40,11 +33,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/last-fm-artistList.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="71" selection-start-line="71" selection-end-line="71" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
+                <state>
+                  <caret column="13" selection-start-column="13" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -52,8 +42,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/shortlist.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="3" selection-start-line="3" selection-end-line="3" />
+                <state relative-caret-position="48">
+                  <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -61,8 +51,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/releaseDetails.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="449">
-                  <caret line="58" column="96" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="96" />
+                <state relative-caret-position="144">
+                  <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -99,8 +89,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/last-fm-artistItem.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="312">
-                  <caret line="34" column="10" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="34" selection-end-column="10" />
+                <state relative-caret-position="288">
+                  <caret line="12" column="5" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="12" selection-end-column="5" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -289,7 +279,7 @@
       <option name="presentableId" value="Default" />
       <updated>1563265528135</updated>
       <workItem from="1563265529614" duration="836000" />
-      <workItem from="1563269229805" duration="88648000" />
+      <workItem from="1563269229805" duration="95637000" />
     </task>
     <task id="LOCAL-00001" summary="feat: routing scaffolding.">
       <created>1563274225974</created>
@@ -347,17 +337,31 @@
       <option name="project" value="LOCAL" />
       <updated>1563792704266</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="chore: created fetch shortlist.&#10;chore: code cleanup.&#10;style: last.fm name styling.">
+      <created>1563797653598</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1563797653598</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: moved shortlist into modal.&#10;chore: converted shortlist component to class component.">
+      <created>1563806429590</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1563806429590</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89484000" />
+    <option name="totallyTimeSpent" value="96473000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15226555" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15226555" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -393,7 +397,9 @@
     <MESSAGE value="fix: release api endpoint.&#10;fix: release list styling.&#10;feat: refactored list and props for release.&#10;none: linter.&#10;none: checkpoint." />
     <MESSAGE value="fix: misaligned imports." />
     <MESSAGE value="feat: last.fm api scaffolding.&#10;feat: created last.fm reducers, actions, components and styling.&#10;feat: created shortlist and pushed it through the reducer.&#10;none: checkpoint." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: last.fm api scaffolding.&#10;feat: created last.fm reducers, actions, components and styling.&#10;feat: created shortlist and pushed it through the reducer.&#10;none: checkpoint." />
+    <MESSAGE value="chore: created fetch shortlist.&#10;chore: code cleanup.&#10;style: last.fm name styling." />
+    <MESSAGE value="feat: moved shortlist into modal.&#10;chore: converted shortlist component to class component." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: moved shortlist into modal.&#10;chore: converted shortlist component to class component." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/streams/index.jsx">
@@ -606,8 +612,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        <state relative-caret-position="360">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -616,35 +622,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/last-fm-artistItem.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="34" column="10" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="34" selection-end-column="10" />
+        <state relative-caret-position="288">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="12" selection-end-column="5" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shortlist.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/releaseDetails.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="144">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/releaseDetails.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/shortlist.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="58" column="96" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="96" />
+        <state relative-caret-position="48">
+          <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/last-fm-artistList.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
