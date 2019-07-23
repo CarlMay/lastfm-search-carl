@@ -9,7 +9,6 @@ class StreamSearchLastFM extends Component {
 
     state = {
         term: '',
-        isSignedIn: null,
     };
 
     constructor(props) {

@@ -1,19 +1,15 @@
-// import streams from '../apis/streams';
 import mindz from '../apis/mindz';
 import lastFm from '../apis/last-fm';
-// import lastFmAuth from '../apis/last-fm-auth';
 
 import {
-    // SIGN_IN,
-    // SIGN_OUT,
-    // CREATE_STREAM,
     SEARCH_RELEASES,
     SEARCH_ARTIST,
     SEARCH_LAST_FM_ARTIST,
     ADD_ARTIST_TO_SHORTLIST,
     FETCH_SHORTLIST,
-    // FETCH_STREAMS,
-    // DELETE_STREAM,
+    FETCH_FAVORITES,
+    REMOVE_FAVORITE,
+    ADD_ARTIST_TO_FAVORITES,
 } from './types';
 
 
@@ -39,6 +35,31 @@ export const addToLastFmShortlist = (artist) => (dispatch) => {
 export const fetchLastFmShortlist = () => (dispatch) => {
     dispatch({
         type: FETCH_SHORTLIST,
+    });
+};
+
+
+export const fetchLastFmFavorites = () => (dispatch) => {
+    console.log('---fetchLastFmFavorites');
+    dispatch({
+        type: FETCH_FAVORITES,
+    });
+};
+
+
+export const removeFromLastFmFavorites = (artist) => (dispatch) => {
+    console.log('---removeFromLastFmFavorites', artist);
+    dispatch({
+        type: REMOVE_FAVORITE,
+        payload: artist
+    });
+};
+
+export const addToLastFmFavorites = (artist) => (dispatch) => {
+    console.log('---action addToLastFmFavorites', artist);
+    dispatch({
+        type: ADD_ARTIST_TO_FAVORITES,
+        payload: artist
     });
 };
 

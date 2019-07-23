@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {Button, Header, Modal} from 'semantic-ui-react'
 import {connect} from "react-redux";
-import {fetchLastFmShortlist} from "../actions";
+import {addToLastFmFavorites, fetchLastFmShortlist, removeFromLastFmFavorites} from '../actions';
+import StarButton from './ui/star-button';
 
 
 class ShortList extends Component {
@@ -9,7 +10,29 @@ class ShortList extends Component {
     constructor(props) {
         super(props);
         this.renderContent = this.renderContent.bind(this);
+        this.handleAddToFavorites = this.handleAddToFavorites.bind(this);
+        this.handleRemoveFromFavorites = this.handleRemoveFromFavorites.bind(this);
     }
+
+    handleAddToFavorites(id, name) {
+            console.log('---Shortlist handleAddToFavorites', id, name);
+            const artist = {
+                'id': id,
+                'name': name,
+            };
+            this.props.addToLastFmFavorites(artist);
+    };
+
+    handleRemoveFromFavorites(id, name) {
+        return() => {
+            console.log('---Shortlist handleRemoveFromFavorites', id, name);
+            const artist = {
+                'id': id,
+                'name': name,
+            };
+            this.props.removeFromLastFmFavorites(artist);
+        }
+    };
 
     renderContent() {
 
@@ -65,8 +88,12 @@ class ShortList extends Component {
                             return (
                                 <div className="row" key={id} style={rowItemStyle}>
                                     <div className="one wide column" style={rowStyle}>
-                                        <i aria-hidden="true"
-                                           className="star outline large icon middle aligned"></i>
+                                        <StarButton
+                                            addToFavorites={this.handleAddToFavorites}
+                                            removeFromFavorites={this.handleRemoveFromFavorites}
+                                            id={id}
+                                            name={name}
+                                        />
                                     </div>
                                     <div className="fourteen wide column left aligned" style={rowStyle}>{name}</div>
                                 </div>
@@ -125,7 +152,7 @@ const mapStateToProps = (state) => {
 
 export default connect(
     mapStateToProps,
-    {fetchLastFmShortlist}
+    {fetchLastFmShortlist, addToLastFmFavorites, removeFromLastFmFavorites}
 )(ShortList);
 
 

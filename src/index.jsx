@@ -7,9 +7,17 @@ import reduxThunk from 'redux-thunk';
 import App from './components/app';
 import reducers from './reducers';
 
+import { createLogger } from 'redux-logger';
+
+const logger = createLogger({
+    collapsed: true,
+});
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__|| compose;
 const store = createStore(
-    reducers, composeEnhancers(applyMiddleware(reduxThunk))
+    reducers, composeEnhancers(
+        applyMiddleware(reduxThunk, logger)
+    )
 );
 
 ReactDOM.render(

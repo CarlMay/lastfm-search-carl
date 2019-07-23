@@ -12,7 +12,6 @@ class ArtistItem extends React.Component {
     }
 
     handleAccordionOpen() {
-        console.log('--handleAccordionOpen', this.state.isOpen);
         this.setState({isOpen: !this.state.isOpen});
     }
 
