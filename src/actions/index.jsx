@@ -8,7 +8,7 @@ import {
     ADD_ARTIST_TO_SHORTLIST,
     FETCH_SHORTLIST,
     FETCH_FAVORITES,
-    REMOVE_FAVORITE,
+    REMOVE_ARTIST_TO_FAVORITES,
     ADD_ARTIST_TO_FAVORITES,
 } from './types';
 
@@ -50,7 +50,7 @@ export const fetchLastFmFavorites = () => (dispatch) => {
 export const removeFromLastFmFavorites = (artist) => (dispatch) => {
     console.log('---removeFromLastFmFavorites', artist);
     dispatch({
-        type: REMOVE_FAVORITE,
+        type: REMOVE_ARTIST_TO_FAVORITES,
         payload: artist
     });
 };

@@ -2,7 +2,6 @@ import React, {Component} from "react";
 
 class StarButton extends Component {
     state = {
-        selected: false,
         defaultPrefix: 'Add to ',
         selectedPrefix: 'Remove from ',
     };
@@ -13,22 +12,19 @@ class StarButton extends Component {
     }
 
     toggleSelected() {
-        const {id, name, removeFromFavorites, addToFavorites} =this.props;
-        console.log('---toggleSelected', id, name);
-        this.setState({selected: !this.state.selected});
+        const {id, name, removeFromFavorites, addToFavorites, selected} =this.props;
+        console.log('---toggleSelected', id, name, selected);
 
-        // const {selected} = this.state;
-        if(!this.state.selected){
-            console.log('---true', id, name);
+        if(!selected){
             addToFavorites( id, name);
         }else{
-            console.log('---false', id, name);
             removeFromFavorites( id, name);
         }
     };
 
     render(){
-        const {defaultPrefix, selectedPrefix, selected} = this.state;
+        const {selected} = this.props;
+        const {defaultPrefix, selectedPrefix} = this.state;
         const title = (selected) ? selectedPrefix : defaultPrefix;
 
         const selectedClassname = 'star green icon';

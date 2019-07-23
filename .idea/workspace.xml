@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4289a07-09d4-48d3-a51c-96d8e3ad502c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ui/star-button.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/carl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/carl.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/types.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/artistItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artistItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/last-fm-artistItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/last-fm-artistItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shortlist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shortlist.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/star-button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/star-button.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,124 +21,108 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.60969543">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="744">
-                  <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/shortlist.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="314">
-                  <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/index.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="432">
-                  <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/ui/star-button.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
-                  <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/actions/index.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="50">
-                  <caret line="39" selection-start-line="39" selection-end-line="39" />
-                  <folding>
-                    <element signature="e#42#76#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/last-fm-artistItem.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-304">
-                  <caret line="15" column="33" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="33" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="536">
-                  <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
-                  <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/actions/types.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="144">
-                  <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/last-fm-artistList.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/last-fm-artistItem.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="49" column="59" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="52" column="40" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="696">
+              <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#162#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/types.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="8" column="45" lean-forward="true" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/shortlist.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ui/star-button.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>handleAddToShortList</find>
       <find>---favorites</find>
       <find>removeFromFavorites</find>
+      <find>toggleSelected</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,17 +156,17 @@
         <option value="$PROJECT_DIR$/src/reducers/mindz-reducer.jsx" />
         <option value="$PROJECT_DIR$/src/reducers/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/last-fm-artist-list.css" />
-        <option value="$PROJECT_DIR$/src/components/last-fm-artistItem.jsx" />
         <option value="$PROJECT_DIR$/src/components/last-fm-artistList.jsx" />
         <option value="$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx" />
         <option value="$PROJECT_DIR$/src/components/artistItem.jsx" />
-        <option value="$PROJECT_DIR$/src/actions/types.jsx" />
-        <option value="$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx" />
+        <option value="$PROJECT_DIR$/src/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx" />
+        <option value="$PROJECT_DIR$/src/components/last-fm-artistItem.jsx" />
+        <option value="$PROJECT_DIR$/src/actions/types.jsx" />
         <option value="$PROJECT_DIR$/src/actions/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/ui/star-button.jsx" />
         <option value="$PROJECT_DIR$/src/components/shortlist.jsx" />
-        <option value="$PROJECT_DIR$/src/index.jsx" />
+        <option value="$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx" />
       </list>
     </option>
   </component>
@@ -214,6 +193,38 @@
               <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
               <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="streams" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,7 +282,7 @@
       <option name="presentableId" value="Default" />
       <updated>1563265528135</updated>
       <workItem from="1563265529614" duration="836000" />
-      <workItem from="1563269229805" duration="108367000" />
+      <workItem from="1563269229805" duration="112945000" />
     </task>
     <task id="LOCAL-00001" summary="feat: routing scaffolding.">
       <created>1563274225974</created>
@@ -350,17 +361,24 @@
       <option name="project" value="LOCAL" />
       <updated>1563806777310</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="chore: refactored fav star into own component.&#10;feat: wired favorites up to reducer.&#10;feat: added add/remove from favs.&#10;none: checkpoint.">
+      <created>1563890466030</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1563890466030</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109203000" />
+    <option name="totallyTimeSpent" value="113781000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15226555" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15226555" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -376,7 +394,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3290461" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -399,7 +417,8 @@
     <MESSAGE value="chore: created fetch shortlist.&#10;chore: code cleanup.&#10;style: last.fm name styling." />
     <MESSAGE value="feat: moved shortlist into modal.&#10;chore: converted shortlist component to class component." />
     <MESSAGE value="chore: refactored LastFmArtistList to a styled component.&#10;feat: wired shortlist up to reducer.&#10;none: checkpoint." />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: refactored LastFmArtistList to a styled component.&#10;feat: wired shortlist up to reducer.&#10;none: checkpoint." />
+    <MESSAGE value="chore: refactored fav star into own component.&#10;feat: wired favorites up to reducer.&#10;feat: added add/remove from favs.&#10;none: checkpoint." />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: refactored fav star into own component.&#10;feat: wired favorites up to reducer.&#10;feat: added add/remove from favs.&#10;none: checkpoint." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/streams/index.jsx">
@@ -552,16 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/last-fm-artistList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -586,17 +595,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx">
+    <entry file="file://$PROJECT_DIR$/src/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        <state relative-caret-position="312">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/last-fm-artistItem.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-304">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="33" />
+        <state relative-caret-position="672">
+          <caret line="49" column="59" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/last-fm-artistList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -605,8 +637,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/types.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="192">
+          <caret line="8" column="45" lean-forward="true" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -615,47 +647,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="240">
+          <caret line="52" column="40" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="40" />
           <folding>
-            <element signature="e#42#76#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ui/star-button.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="344">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/shortlist.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+        <state relative-caret-position="290">
+          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.jsx">
+    <entry file="file://$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        <state relative-caret-position="696">
+          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#162#0" expanded="true" />
           </folding>
         </state>
       </provider>

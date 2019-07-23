@@ -45,10 +45,11 @@ class LastFmArtistItem extends React.Component {
                 <div className="ui container artist-list" style={listStyle}>
                     <Image src={image[0]["#text"]} size='mini' style={iconStyle}/>
                     <div className="artist-name">{name}</div>
-                    <button className={'ui circular green icon button'}>
-                        <i aria-hidden="true"
-                           className="plus icon"
-                           onClick={this.handleAddToShortList}></i>
+                    <button
+                        className={'ui circular green icon button'}
+                        onClick={this.handleAddToShortList}
+                    >
+                        <i aria-hidden="true" className="plus icon"></i>
                     </button>
                 </div>
             </div>

@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import {Button, Header, Modal} from 'semantic-ui-react'
 import {connect} from "react-redux";
-import {addToLastFmFavorites, fetchLastFmShortlist, removeFromLastFmFavorites} from '../actions';
+import {
+    addToLastFmFavorites,
+    fetchLastFmShortlist,
+    removeFromLastFmFavorites,
+    fetchLastFmFavorites,
+} from '../actions';
 import StarButton from './ui/star-button';
 
 
@@ -15,23 +20,20 @@ class ShortList extends Component {
     }
 
     handleAddToFavorites(id, name) {
-            console.log('---Shortlist handleAddToFavorites', id, name);
-            const artist = {
-                'id': id,
-                'name': name,
-            };
-            this.props.addToLastFmFavorites(artist);
+        const artist = {
+            'id': id,
+            'name': name,
+        };
+        this.props.addToLastFmFavorites(artist);
     };
 
     handleRemoveFromFavorites(id, name) {
-        return() => {
-            console.log('---Shortlist handleRemoveFromFavorites', id, name);
-            const artist = {
-                'id': id,
-                'name': name,
-            };
-            this.props.removeFromLastFmFavorites(artist);
-        }
+        const artist = {
+            'id': id,
+            'name': name,
+        };
+        this.props.removeFromLastFmFavorites(artist);
+
     };
 
     renderContent() {
@@ -71,12 +73,14 @@ class ShortList extends Component {
             marginTop: 0,
         };
 
-        const {shortlist} = this.props;
+        const {shortlist, favorites} = this.props;
         const hasShortlist = !!(shortlist.length > 0);
 
-        console.log('---hasShortlist', hasShortlist);
+        console.log('---shortlist', shortlist);
+        console.log('---favorites', favorites);
 
-        if(hasShortlist){
+
+        if (hasShortlist) {
             return (
                 <div className="ui container two column grid vertically divided left aligned" style={listStyle}>
                     <div className="row" style={titleRowStyle}>
@@ -84,7 +88,12 @@ class ShortList extends Component {
                         <div className="fourteen wide column left aligned" style={titleStyle}>Artist Name</div>
                     </div>
                     {
+
                         shortlist.map(({id, name}) => {
+                            const isSelected = !!(favorites.find((e) => {
+                                return e.id === id;
+                            }));
+
                             return (
                                 <div className="row" key={id} style={rowItemStyle}>
                                     <div className="one wide column" style={rowStyle}>
@@ -93,6 +102,7 @@ class ShortList extends Component {
                                             removeFromFavorites={this.handleRemoveFromFavorites}
                                             id={id}
                                             name={name}
+                                            selected={isSelected}
                                         />
                                     </div>
                                     <div className="fourteen wide column left aligned" style={rowStyle}>{name}</div>
@@ -102,12 +112,14 @@ class ShortList extends Component {
                     }
                 </div>
             );
-        }else{
+        } else {
             return (
                 <div className="ui container two column grid vertically divided left aligned" style={listStyle}>
                     <div className="row" style={titleRowStyle}>
                         <div className="one wide column"></div>
-                        <div className="fourteen wide column left aligned" style={titleStyle}>Please select an artist to add to your short list.</div>
+                        <div className="fourteen wide column left aligned" style={titleStyle}>Please select an artist to
+                            add to your short list.
+                        </div>
                     </div>
                 </div>
             );
@@ -147,12 +159,13 @@ class ShortList extends Component {
 const mapStateToProps = (state) => {
     return {
         shortlist: state.lastFm.shortlist,
+        favorites: state.lastFm.favorites,
     };
 };
 
 export default connect(
     mapStateToProps,
-    {fetchLastFmShortlist, addToLastFmFavorites, removeFromLastFmFavorites}
+    {fetchLastFmShortlist, addToLastFmFavorites, removeFromLastFmFavorites, fetchLastFmFavorites}
 )(ShortList);
 
 

@@ -6,14 +6,6 @@ import {fetchLastFmFavorites, removeFromLastFmFavorites} from "../../actions";
 
 class StreamShowFavorites  extends Component {
 
-    state = {
-        term: '',
-    };
-
-    // constructor(props) {
-    //     super(props);
-    //     // this.onSearchSubmit = this.onSearchSubmit.bind(this);
-    // }
     render(){
         const {favorites} = this.props;
         const hasFavorites = !!(favorites && favorites.length > 0);
@@ -25,6 +17,15 @@ class StreamShowFavorites  extends Component {
                 <h1 className={'ui header'}>Favorites</h1>
                 {hasFavorites &&
                     <ArtistList artists={favorites}/>
+                }
+                {!hasFavorites &&
+                    <div className="ui container two column grid vertically divided left aligned">
+                        <div className="row" >
+                            <div className="fourteen wide column left aligned" >Please select an artist to
+                                add to your favorites from the short list.
+                            </div>
+                        </div>
+                    </div>
                 }
             </ContentContainer>
         );
