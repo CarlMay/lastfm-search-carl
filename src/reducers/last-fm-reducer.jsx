@@ -48,6 +48,9 @@ export default (state = INITIAL_STATE, action) => {
         }
         case ADD_ARTIST_TO_SHORTLIST: {
             const {mbid, name} = action.payload;
+            const isDuplicate = !!(state.shortlist.find(item => item.mbid !== mbid));
+
+            if(isDuplicate) return state;
 
             return {
                 ...state,
