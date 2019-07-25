@@ -76,10 +76,6 @@ class ShortList extends Component {
         const {shortlist, favoritesArtists} = this.props;
         const hasShortlist = !!(shortlist.length > 0);
 
-        console.log('---shortlist', shortlist);
-        console.log('---favoritesArtists', favoritesArtists);
-
-
         if (hasShortlist) {
             return (
                 <div className="ui container two column grid vertically divided left aligned" style={listStyle}>

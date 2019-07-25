@@ -3,7 +3,6 @@ import {
     SEARCH_ARTIST,
     ADD_RELEASE_TO_FAVORITES,
     REMOVE_RELEASE_FROM_FAVORITES,
-    // SIGN_OUT
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -23,26 +22,13 @@ export default (state = INITIAL_STATE, action) => {
                     ...data,
                 }
             };
-
         }
         case SEARCH_ARTIST: {
-            // console.log('---SEARCH_ARTIST', action.payload.artists);
             const data = action.payload.artists;
             return {...state, artists: data};
         }
         case ADD_RELEASE_TO_FAVORITES: {
             const {releaseId, artistId} = action.payload;
-
-            // Object.keys(state.favoriteReleases).map((keyName, keyIndex) => {
-            //     // use keyName to get current key's name
-            //     // and a[keyName] to get its value
-            // });
-
-            // const isDuplicate = !!(Object.keys(state.favoriteReleases).includes(releaseId));
-            // console.log('---isDuplicate', isDuplicate);
-            console.log('---state.favoriteReleases', state.favoriteReleases);
-
-            // if(isDuplicate) return state;
 
             return {
                 ...state,
@@ -56,16 +42,14 @@ export default (state = INITIAL_STATE, action) => {
             };
         }
         case REMOVE_RELEASE_FROM_FAVORITES: {
-            const {id} = action.payload;
-            const filteredFavourites = state.favoriteReleases.filter(item => item.id !== id);
+            const {releaseId} = action.payload;
+            const filteredFavourites = state.favoriteReleases.filter(item => item.releaseId !== releaseId);
 
             return {
                 ...state,
                 favoriteReleases: filteredFavourites,
             };
         }
-        // case SIGN_OUT:
-        //     return {...state, isSignedIn: false, userId: null};
         default:
             return state;
     }

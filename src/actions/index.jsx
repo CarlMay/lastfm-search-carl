@@ -11,7 +11,7 @@ import {
     REMOVE_ARTIST_TO_FAVORITES,
     ADD_ARTIST_TO_FAVORITES,
     ADD_RELEASE_TO_FAVORITES,
-    // REMOVE_RELEASE_FROM_FAVORITES,
+    REMOVE_RELEASE_FROM_FAVORITES,
 } from './types';
 
 
@@ -42,7 +42,6 @@ export const fetchLastFmShortlist = () => (dispatch) => {
 
 
 export const fetchLastFmFavorites = () => (dispatch) => {
-    console.log('---fetchLastFmFavorites');
     dispatch({
         type: FETCH_FAVORITES,
     });
@@ -50,15 +49,14 @@ export const fetchLastFmFavorites = () => (dispatch) => {
 
 
 export const removeFromLastFmFavorites = (artist) => (dispatch) => {
-    console.log('---removeFromLastFmFavorites', artist);
     dispatch({
         type: REMOVE_ARTIST_TO_FAVORITES,
         payload: artist
     });
 };
 
+
 export const addToLastFmFavorites = (artist) => (dispatch) => {
-    console.log('---action addToLastFmFavorites', artist);
     dispatch({
         type: ADD_ARTIST_TO_FAVORITES,
         payload: artist
@@ -76,9 +74,6 @@ export const searchReleases = (artistId) => async (dispatch) => {
         [artistId]: response.data.releases,
     };
 
-    // const ArtistReleases = `${artistId}: ${response.data.releases}`;
-    console.log('---ArtistReleases', ArtistReleases);
-
     dispatch({
         type: SEARCH_RELEASES,
         payload: ArtistReleases,
@@ -86,15 +81,18 @@ export const searchReleases = (artistId) => async (dispatch) => {
 };
 
 export const addToMindzFavorites = (release) => (dispatch) => {
-    console.log('---action addToMindzFavorites', release);
     dispatch({
         type: ADD_RELEASE_TO_FAVORITES,
         payload: release
     });
 };
 
-
-
+export const removeFromMindzFavorites = (release) => (dispatch) => {
+    dispatch({
+        type: REMOVE_RELEASE_FROM_FAVORITES,
+        payload: release
+    });
+};
 
 export const searchArtist = (term) => async (dispatch) => {
     const response = await mindz.get('artist/?', {

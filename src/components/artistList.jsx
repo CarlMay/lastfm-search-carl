@@ -6,8 +6,6 @@ const ArtistList = (props) => {
         return <ArtistItem key={artist.id} artists={artist} />;
     });
 
-    // console.log('---ArtistList artists', props.artists);
-
     const headerStyle = {
         marginTop: '2rem',
         borderBottom: 'solid 1px #ccc',

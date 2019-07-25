@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {searchReleases, addToMindzFavorites} from '../actions';
+import {
+    searchReleases,
+    addToMindzFavorites,
+    removeFromMindzFavorites,
+} from '../actions';
 import StarButton from './ui/star-button';
 
 class ReleaseDetails extends Component {
@@ -19,7 +23,6 @@ class ReleaseDetails extends Component {
             'releaseId': releaseId,
             'artistId': artistId,
         };
-        console.log('---handleAddToFavorites', release);
         this.props.addToMindzFavorites(release);
     };
 
@@ -28,9 +31,7 @@ class ReleaseDetails extends Component {
             'releaseId': releaseId,
             'artistId': artistId,
         };
-        console.log('---handleRemoveFromFavorites', release);
-        // this.props.removeFromMindzFavorites(release);
-
+        this.props.removeFromMindzFavorites(release);
     };
 
     findLabelHelper = (labelInfo) => {
@@ -44,7 +45,8 @@ class ReleaseDetails extends Component {
 
 
     renderDetails() {
-        const releases = this.props.ArtistReleases[this.props.artistId];
+        const {favoriteReleases, ArtistReleases, artistId} =this.props;
+        const releases = ArtistReleases[artistId];
 
         //TODO: fix this!
         if (!releases || releases.length === 0) {
@@ -55,13 +57,13 @@ class ReleaseDetails extends Component {
         return (
 
             releases.map((release) => {
-                // console.log('---release', release);
                 const {id, title, date, "label-info": labelInfo, "track-count": tracks} = release;
                 const label = this.findLabelHelper(labelInfo);
-                // const name = artistInfo[0].artist;
 
-                // console.log('---artistInfo', artistInfo);
-                // console.log('---artist', name);
+                const isSelected = !!(favoriteReleases.find((e) => {
+                    return e.releaseId === id;
+                }));
+
 
                 const rowStyle = {
                     marginBottom: 0,
@@ -76,7 +78,7 @@ class ReleaseDetails extends Component {
                                 removeFromFavorites={this.handleRemoveFromFavorites}
                                 id={id}
                                 name={this.props.artistId}
-                                selected={false}
+                                selected={isSelected}
                             />
                         </div>
                         <div className="two wide column" style={rowStyle}>{date}</div>
@@ -132,6 +134,6 @@ export default connect(
     {
         searchReleases,
         addToMindzFavorites,
-        // removeFromMindzFavorites,
+        removeFromMindzFavorites,
     }
 )(ReleaseDetails);
