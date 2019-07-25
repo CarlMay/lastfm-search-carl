@@ -8,7 +8,7 @@ import {
 
 const INITIAL_STATE = {
     artists: [],
-    releases: [],
+    ArtistReleases: [],
     favoriteReleases: [],
 };
 
@@ -16,7 +16,14 @@ export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case SEARCH_RELEASES: {
             const data = action.payload;
-            return {...state, releases: data};
+            return {
+                ...state,
+                ArtistReleases: {
+                    ...state.ArtistReleases,
+                    ...data,
+                }
+            };
+
         }
         case SEARCH_ARTIST: {
             // console.log('---SEARCH_ARTIST', action.payload.artists);

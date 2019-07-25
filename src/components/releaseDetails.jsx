@@ -32,7 +32,7 @@ class ReleaseDetails extends Component {
     };
 
     findLabelHelper = (labelInfo) => {
-        if(!labelInfo || !labelInfo.length) return '';
+        if (!labelInfo || !labelInfo.length) return '';
         return labelInfo.reduce((acc, current) => {
             if (!!acc) return acc;
             if (current.label && current.label.name) return current.label.name;
@@ -42,10 +42,21 @@ class ReleaseDetails extends Component {
 
 
     renderDetails() {
+        const releases = this.props.ArtistReleases[this.props.artistId];
+        console.log('---releases', releases);
+
+        if (!releases || releases.length === 0) {
+            return (<div>Loading...</div>)
+        }
+
+
         return (
-            this.props.releases.map((release) => {
-                const {id, title, date, "label-info": labelInfo, "artist-credit": artistInfo, "track-count": tracks} = release;
+
+            releases.map((release) => {
                 console.log('---release', release);
+
+
+                const {id, title, date, "label-info": labelInfo, "artist-credit": artistInfo, "track-count": tracks} = release;
                 const label = this.findLabelHelper(labelInfo);
                 const name = artistInfo[0].artist;
 
@@ -74,9 +85,12 @@ class ReleaseDetails extends Component {
                         <div className="three wide column" style={rowStyle}>{tracks}</div>
                     </div>
                 );
+
+
             })
         );
     }
+
 
     render() {
         const rowStyle = {
@@ -107,7 +121,7 @@ class ReleaseDetails extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        releases: state.mindz.releases,
+        ArtistReleases: state.mindz.ArtistReleases,
     };
 };
 

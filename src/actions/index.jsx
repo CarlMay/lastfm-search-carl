@@ -70,10 +70,16 @@ export const addToLastFmFavorites = (artist) => (dispatch) => {
 // MusicMindz API
 export const searchReleases = (artistId) => async (dispatch) => {
     const response = await mindz.get(`release/?query=arid:${artistId}`);
+    const ArtistReleases = {
+        [artistId]: response.data.releases,
+    };
+
+    // const ArtistReleases = `${artistId}: ${response.data.releases}`;
+    console.log('---ArtistReleases', ArtistReleases);
 
     dispatch({
         type: SEARCH_RELEASES,
-        payload: response.data.releases
+        payload: ArtistReleases,
     });
 };
 
