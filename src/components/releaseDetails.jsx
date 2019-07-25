@@ -1,28 +1,56 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {searchReleases} from '../actions';
+import StarButton from './ui/star-button';
 
 class ReleaseDetails extends Component {
+    static defaultProps = {
+        label: 'default',
+    };
 
     componentDidMount() {
         this.props.searchReleases(this.props.artistId);
+        this.handleAddToFavorites = this.handleAddToFavorites.bind(this);
+        this.handleRemoveFromFavorites = this.handleRemoveFromFavorites.bind(this);
     }
+
+    handleAddToFavorites(id, name) {
+        const release = {
+            'id': id,
+            'name': name,
+        };
+        this.props.addToMindzFavorites(release);
+    };
+
+    handleRemoveFromFavorites(id, name) {
+        const release = {
+            'id': id,
+            'name': name,
+        };
+        this.props.removeFromMindzFavorites(release);
+
+    };
+
+    findLabelHelper = (labelInfo) => {
+        if(!labelInfo || !labelInfo.length) return '';
+        return labelInfo.reduce((acc, current) => {
+            if (!!acc) return acc;
+            if (current.label && current.label.name) return current.label.name;
+            return acc;
+        }, null);
+    };
 
 
     renderDetails() {
-        // console.log('---release', this.props.releases);
         return (
             this.props.releases.map((release) => {
-                const {id, title, date, "label-info": labelInfo, "track-count": tracks} = release;
+                const {id, title, date, "label-info": labelInfo, "artist-credit": artistInfo, "track-count": tracks} = release;
+                console.log('---release', release);
+                const label = this.findLabelHelper(labelInfo);
+                const name = artistInfo[0].artist;
 
-                // console.log('---labelInfo name',labelInfo[0].label.name);
-                // console.log('---find', labelInfo.find(info => info.label === 'label'));
-
-                // user => user.id === ownProps.userId)
-                // labelInfo !== null && labelInfo.length > 0 && labelInfo[0].label.name !== null
-
-                // const releaseLabel = (labelInfo[0].label.name !== null) ? labelInfo[0].label.name : '';
-                // console.log('---releaseLabel',releaseLabel);
+                console.log('---artistInfo', artistInfo);
+                console.log('---artist', name);
 
                 const rowStyle = {
                     marginBottom: 0,
@@ -32,11 +60,17 @@ class ReleaseDetails extends Component {
                 return (
                     <div className="row" key={id}>
                         <div className="one wide column" style={rowStyle}>
-                            <i aria-hidden="true" className="star outline large icon middle aligned"></i>
+                            <StarButton
+                                addToFavorites={this.handleAddToFavorites}
+                                removeFromFavorites={this.handleRemoveFromFavorites}
+                                id={id}
+                                name={title}
+                                selected={false}
+                            />
                         </div>
                         <div className="two wide column" style={rowStyle}>{date}</div>
                         <div className="three wide column" style={rowStyle}>{title}</div>
-                        <div className="three wide column" style={rowStyle}>label</div>
+                        <div className="three wide column" style={rowStyle}>{label}</div>
                         <div className="three wide column" style={rowStyle}>{tracks}</div>
                     </div>
                 );
@@ -45,7 +79,6 @@ class ReleaseDetails extends Component {
     }
 
     render() {
-        // console.log('---ReleaseDetails', this.props);
         const rowStyle = {
             marginBottom: 0,
             marginTop: 0,

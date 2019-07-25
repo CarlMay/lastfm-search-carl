@@ -7,16 +7,17 @@ import {fetchLastFmFavorites, removeFromLastFmFavorites} from "../../actions";
 class StreamShowFavorites  extends Component {
 
     render(){
-        const {favorites} = this.props;
-        const hasFavorites = !!(favorites && favorites.length > 0);
+        const {favoritesArtists} = this.props;
+        const hasFavorites = !!(favoritesArtists && favoritesArtists.length > 0);
 
-        console.log('---favorites', favorites);
+        console.log('---favoritesArtists', favoritesArtists);
+        // console.log('---favoriteReleases', favoriteReleases);
 
         return (
             <ContentContainer>
                 <h1 className={'ui header'}>Favorites</h1>
                 {hasFavorites &&
-                    <ArtistList artists={favorites}/>
+                    <ArtistList artists={favoritesArtists}/>
                 }
                 {!hasFavorites &&
                     <div className="ui container two column grid vertically divided left aligned">
@@ -36,7 +37,7 @@ class StreamShowFavorites  extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        favorites: state.lastFm.favorites,
+        favoritesArtists: state.lastFm.favoritesArtists,
     };
 };
 

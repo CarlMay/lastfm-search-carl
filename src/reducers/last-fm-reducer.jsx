@@ -11,7 +11,7 @@ const INITIAL_STATE = {
     artists: [],
     releases: [],
     shortlist: [],
-    favorites: [],
+    favoritesArtists: [],
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -24,8 +24,8 @@ export default (state = INITIAL_STATE, action) => {
             const {id, name} = action.payload;
 
             return Object.assign({}, state, {
-                favorites: [
-                    ...state.favorites,
+                favoritesArtists: [
+                    ...state.favoritesArtists,
                     {
                         id: id,
                         name: name,
@@ -35,11 +35,11 @@ export default (state = INITIAL_STATE, action) => {
         }
         case REMOVE_ARTIST_TO_FAVORITES: {
             const {id} = action.payload;
-            const filteredFavourites = state.favorites.filter(item => item.id !== id);
+            const filteredFavourites = state.favoritesArtists.filter(item => item.id !== id);
 
             return {
                 ...state,
-                favorites: filteredFavourites,
+                favoritesArtists: filteredFavourites,
             };
         }
         case FETCH_FAVORITES:

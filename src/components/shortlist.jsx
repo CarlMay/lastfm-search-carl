@@ -73,11 +73,11 @@ class ShortList extends Component {
             marginTop: 0,
         };
 
-        const {shortlist, favorites} = this.props;
+        const {shortlist, favoritesArtists} = this.props;
         const hasShortlist = !!(shortlist.length > 0);
 
         console.log('---shortlist', shortlist);
-        console.log('---favorites', favorites);
+        console.log('---favoritesArtists', favoritesArtists);
 
 
         if (hasShortlist) {
@@ -90,7 +90,7 @@ class ShortList extends Component {
                     {
 
                         shortlist.map(({id, name}) => {
-                            const isSelected = !!(favorites.find((e) => {
+                            const isSelected = !!(favoritesArtists.find((e) => {
                                 return e.id === id;
                             }));
 
@@ -159,13 +159,18 @@ class ShortList extends Component {
 const mapStateToProps = (state) => {
     return {
         shortlist: state.lastFm.shortlist,
-        favorites: state.lastFm.favorites,
+        favoritesArtists: state.lastFm.favoritesArtists,
     };
 };
 
 export default connect(
     mapStateToProps,
-    {fetchLastFmShortlist, addToLastFmFavorites, removeFromLastFmFavorites, fetchLastFmFavorites}
+    {
+        fetchLastFmShortlist,
+        addToLastFmFavorites,
+        removeFromLastFmFavorites,
+        fetchLastFmFavorites
+    }
 )(ShortList);
 
 

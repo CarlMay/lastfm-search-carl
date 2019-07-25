@@ -13,7 +13,6 @@ class StarButton extends Component {
 
     toggleSelected() {
         const {id, name, removeFromFavorites, addToFavorites, selected} =this.props;
-        console.log('---toggleSelected', id, name, selected);
 
         if(!selected){
             addToFavorites( id, name);
