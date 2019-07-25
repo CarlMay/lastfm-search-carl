@@ -31,25 +31,37 @@ export default (state = INITIAL_STATE, action) => {
             return {...state, artists: data};
         }
         case ADD_RELEASE_TO_FAVORITES: {
-            const {id, name} = action.payload;
+            const {releaseId, artistId} = action.payload;
 
-            return Object.assign({}, state, {
-                favoritesReleases: [
-                    ...state.favoritesReleases,
-                    {
-                        id: id,
-                        name: name,
-                    }
-                ]
-            })
-        }
-        case REMOVE_RELEASE_FROM_FAVORITES: {
-            const {id} = action.payload;
-            const filteredFavourites = state.favoritesReleases.filter(item => item.id !== id);
+            // Object.keys(state.favoriteReleases).map((keyName, keyIndex) => {
+            //     // use keyName to get current key's name
+            //     // and a[keyName] to get its value
+            // });
+
+            // const isDuplicate = !!(Object.keys(state.favoriteReleases).includes(releaseId));
+            // console.log('---isDuplicate', isDuplicate);
+            console.log('---state.favoriteReleases', state.favoriteReleases);
+
+            // if(isDuplicate) return state;
 
             return {
                 ...state,
-                favoritesReleases: filteredFavourites,
+                favoriteReleases: [
+                    ...state.favoriteReleases,
+                    {
+                        releaseId: releaseId,
+                        artistId: artistId,
+                    }
+                ]
+            };
+        }
+        case REMOVE_RELEASE_FROM_FAVORITES: {
+            const {id} = action.payload;
+            const filteredFavourites = state.favoriteReleases.filter(item => item.id !== id);
+
+            return {
+                ...state,
+                favoriteReleases: filteredFavourites,
             };
         }
         // case SIGN_OUT:

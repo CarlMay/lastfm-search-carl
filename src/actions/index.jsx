@@ -10,6 +10,8 @@ import {
     FETCH_FAVORITES,
     REMOVE_ARTIST_TO_FAVORITES,
     ADD_ARTIST_TO_FAVORITES,
+    ADD_RELEASE_TO_FAVORITES,
+    // REMOVE_RELEASE_FROM_FAVORITES,
 } from './types';
 
 
@@ -82,6 +84,17 @@ export const searchReleases = (artistId) => async (dispatch) => {
         payload: ArtistReleases,
     });
 };
+
+export const addToMindzFavorites = (release) => (dispatch) => {
+    console.log('---action addToMindzFavorites', release);
+    dispatch({
+        type: ADD_RELEASE_TO_FAVORITES,
+        payload: release
+    });
+};
+
+
+
 
 export const searchArtist = (term) => async (dispatch) => {
     const response = await mindz.get('artist/?', {

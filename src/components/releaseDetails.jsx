@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {searchReleases} from '../actions';
+import {searchReleases, addToMindzFavorites} from '../actions';
 import StarButton from './ui/star-button';
 
 class ReleaseDetails extends Component {
@@ -14,20 +14,22 @@ class ReleaseDetails extends Component {
         this.handleRemoveFromFavorites = this.handleRemoveFromFavorites.bind(this);
     }
 
-    handleAddToFavorites(id, name) {
+    handleAddToFavorites(releaseId, artistId) {
         const release = {
-            'id': id,
-            'name': name,
+            'releaseId': releaseId,
+            'artistId': artistId,
         };
+        console.log('---handleAddToFavorites', release);
         this.props.addToMindzFavorites(release);
     };
 
-    handleRemoveFromFavorites(id, name) {
+    handleRemoveFromFavorites(releaseId, artistId) {
         const release = {
-            'id': id,
-            'name': name,
+            'releaseId': releaseId,
+            'artistId': artistId,
         };
-        this.props.removeFromMindzFavorites(release);
+        console.log('---handleRemoveFromFavorites', release);
+        // this.props.removeFromMindzFavorites(release);
 
     };
 
@@ -43,8 +45,8 @@ class ReleaseDetails extends Component {
 
     renderDetails() {
         const releases = this.props.ArtistReleases[this.props.artistId];
-        console.log('---releases', releases);
 
+        //TODO: fix this!
         if (!releases || releases.length === 0) {
             return (<div>Loading...</div>)
         }
@@ -53,15 +55,13 @@ class ReleaseDetails extends Component {
         return (
 
             releases.map((release) => {
-                console.log('---release', release);
-
-
-                const {id, title, date, "label-info": labelInfo, "artist-credit": artistInfo, "track-count": tracks} = release;
+                // console.log('---release', release);
+                const {id, title, date, "label-info": labelInfo, "track-count": tracks} = release;
                 const label = this.findLabelHelper(labelInfo);
-                const name = artistInfo[0].artist;
+                // const name = artistInfo[0].artist;
 
-                console.log('---artistInfo', artistInfo);
-                console.log('---artist', name);
+                // console.log('---artistInfo', artistInfo);
+                // console.log('---artist', name);
 
                 const rowStyle = {
                     marginBottom: 0,
@@ -75,7 +75,7 @@ class ReleaseDetails extends Component {
                                 addToFavorites={this.handleAddToFavorites}
                                 removeFromFavorites={this.handleRemoveFromFavorites}
                                 id={id}
-                                name={title}
+                                name={this.props.artistId}
                                 selected={false}
                             />
                         </div>
@@ -122,11 +122,16 @@ class ReleaseDetails extends Component {
 const mapStateToProps = (state) => {
     return {
         ArtistReleases: state.mindz.ArtistReleases,
+        favoriteReleases: state.mindz.favoriteReleases,
     };
 };
 
 
 export default connect(
     mapStateToProps,
-    {searchReleases}
+    {
+        searchReleases,
+        addToMindzFavorites,
+        // removeFromMindzFavorites,
+    }
 )(ReleaseDetails);

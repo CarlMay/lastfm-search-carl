@@ -15,9 +15,9 @@ class StarButton extends Component {
         const {id, name, removeFromFavorites, addToFavorites, selected} =this.props;
 
         if(!selected){
-            addToFavorites( id, name);
+            addToFavorites(id, name);
         }else{
-            removeFromFavorites( id, name);
+            removeFromFavorites(id, name);
         }
     };
 
