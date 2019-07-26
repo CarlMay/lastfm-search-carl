@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4289a07-09d4-48d3-a51c-96d8e3ad502c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/releaseDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/releaseDetails.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="f4289a07-09d4-48d3-a51c-96d8e3ad502c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -19,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/shared/releaseDetails.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+            <state relative-caret-position="312">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -252,7 +249,7 @@
       <updated>1563265528135</updated>
       <workItem from="1563265529614" duration="836000" />
       <workItem from="1563269229805" duration="126742000" />
-      <workItem from="1564059294741" duration="36962000" />
+      <workItem from="1564059294741" duration="37292000" />
     </task>
     <task id="LOCAL-00001" summary="feat: routing scaffolding.">
       <created>1563274225974</created>
@@ -436,17 +433,23 @@
       <option name="project" value="LOCAL" />
       <updated>1564150353248</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="chore: code cleanup.&#10;none: checkpoint - 1st release.">
+      <created>1564150683113</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1564150683113</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164540000" />
+    <option name="totallyTimeSpent" value="164870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15226555" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15226555" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -460,7 +463,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3290461" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3290461" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3290461" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -472,7 +475,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: wired up redux.&#10;chore: created actions, reducer and artist search.&#10;chore: refactored components to accommodate redux.&#10;chore: code cleanup." />
     <MESSAGE value="feat: added release api - checkpoint." />
     <MESSAGE value="fix: release api endpoint.&#10;fix: release list styling.&#10;feat: refactored list and props for release.&#10;none: checkpoint." />
     <MESSAGE value="fix: release api endpoint.&#10;fix: release list styling.&#10;feat: refactored list and props for release.&#10;none: linter.&#10;none: checkpoint." />
@@ -497,7 +499,8 @@
     <MESSAGE value="feat: added functionality to remove artists form shortlist." />
     <MESSAGE value="feat: added functionality to remove artists form favorites." />
     <MESSAGE value="chore: loaded styling.&#10;chore: disabled search on submit." />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: loaded styling.&#10;chore: disabled search on submit." />
+    <MESSAGE value="chore: code cleanup.&#10;none: checkpoint - 1st release." />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: code cleanup.&#10;none: checkpoint - 1st release." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/streams/index.jsx">
@@ -758,8 +761,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/shared/releaseDetails.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+        <state relative-caret-position="312">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
