@@ -7,17 +7,14 @@ import {fetchLastFmFavorites, removeFromLastFmFavorites} from "../../actions";
 class StreamShowFavorites  extends Component {
 
     render(){
-        const {favoritesArtists} = this.props;
+        const {favoritesArtists, removeFromLastFmFavorites} = this.props;
         const hasFavorites = !!(favoritesArtists && favoritesArtists.length > 0);
-
-        // console.log('---favoritesArtists', favoritesArtists);
-        // console.log('---favoriteReleases', favoriteReleases);
 
         return (
             <ContentContainer>
                 <h1 className={'ui header'}>Favorites</h1>
                 {hasFavorites &&
-                    <ArtistList artists={favoritesArtists}/>
+                    <ArtistList artists={favoritesArtists} removeFromFavorites={removeFromLastFmFavorites} section={'favorites'}/>
                 }
                 {!hasFavorites &&
                     <div className="ui container two column grid vertically divided left aligned">

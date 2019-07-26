@@ -2,8 +2,9 @@ import React from 'react';
 import ArtistItem from './artistItem';
 
 const ArtistList = (props) => {
+    const {removeFromFavorites, section} = props;
     const artistData = props.artists.map((artist) => {
-        return <ArtistItem key={artist.id} artists={artist} />;
+        return <ArtistItem key={artist.id} artists={artist} removeFromFavorites={removeFromFavorites} section={section}/>;
     });
 
     const headerStyle = {

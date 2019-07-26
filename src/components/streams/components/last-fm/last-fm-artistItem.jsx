@@ -18,7 +18,6 @@ class LastFmArtistItem extends React.Component {
     };
 
     handleRemoveFromShortList() {
-        console.log('---handleRemoveFromShortList', this.props);
         this.props.removeFromShortlist(this.props.artists);
     };
 
@@ -27,10 +26,6 @@ class LastFmArtistItem extends React.Component {
         const {artists, shortlist} = this.props;
         const {name, image, mbid } = artists;
         const isInShortList = shortlist.find(item => item.id === mbid);
-
-        // console.log('---props', this.props);
-        // console.log('---isInShortList', isInShortList);
-        // const accordionText = (isOpen) ? 'Hide' : 'Show';
 
         const listStyle = {
             backgroundColor: '#f9f9f9',
@@ -55,16 +50,18 @@ class LastFmArtistItem extends React.Component {
                     <div className="artist-name">{name}</div>
                     {!isInShortList &&
                         <button
-                            className={'ui circular green icon button'}
+                            className={'ui circular green mini icon button'}
                             onClick={this.handleAddToShortList}
+                            title={'Add to your shortlist'}
                         >
                             <i aria-hidden="true" className="plus icon"></i>
                         </button>
                     }
                     {isInShortList &&
                         <button
-                            className={'ui circular red icon button'}
+                            className={'ui circular red icon mini button'}
                             onClick={this.handleRemoveFromShortList}
+                            title={'Remove from your shortlist'}
                         >
                             <i aria-hidden="true" className="minus icon"></i>
                         </button>

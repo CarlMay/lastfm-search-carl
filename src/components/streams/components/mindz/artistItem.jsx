@@ -9,17 +9,23 @@ class ArtistItem extends React.Component {
     constructor(props) {
         super(props);
         this.handleAccordionOpen = this.handleAccordionOpen.bind(this);
+        this.handleRemoveFromFavorites = this.handleRemoveFromFavorites.bind(this);
     }
 
     handleAccordionOpen() {
         this.setState({isOpen: !this.state.isOpen});
     }
 
+    handleRemoveFromFavorites() {
+        this.props.removeFromFavorites(this.props.artists);
+    }
+
     render() {
 
-        const {artists} = this.props;
+        const {artists, section} = this.props;
         const {name, id} = artists;
         const {isOpen} = this.state;
+        const isAbleToRemoveFavorites = (section === 'favorites');
 
         const accordionText = (isOpen) ? 'Hide' : 'Show';
 
@@ -44,9 +50,25 @@ class ArtistItem extends React.Component {
             display: 'block',
         };
 
+        const buttonStyle = {
+            marginTop: '0.65rem',
+        };
+
         return (
             <div className="ui container">
                 <div className="ui container grid" style={listStyle}>
+                    {isAbleToRemoveFavorites &&
+                        <div>
+                            <button
+                                className={'ui circular red mini icon button'}
+                                onClick={this.handleRemoveFromFavorites}
+                                title={'Remove from favorites'}
+                                style={buttonStyle}
+                            >
+                                <i aria-hidden="true" className="minus icon"></i>
+                            </button>
+                        </div>
+                    }
                     <div className="nine wide column">{name}</div>
                     <div className="three wide column" style={showReleaseBlockStyle}>
                         <span onClick={this.handleAccordionOpen}
