@@ -16,8 +16,9 @@ import {
 
 
 // Last.fm API
-export const searchLastFmArtist = (artist) => async (dispatch) => {
+export const searchLastFmArtist = (searchArtist) => async (dispatch) => {
     const key = '850a15314ce90b4721eb773a648ba8bb';
+    const {searchText:artist} = searchArtist;
     const response = await lastFm.get(`?method=artist.search&artist=${artist}&api_key=${key}&format=json`);
 
     // console.log('---response', response);

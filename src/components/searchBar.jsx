@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
     }
 
     onSubmit = (formValues) => {
-        // console.log('---formValues', formValues);
+        console.log('---formValues', formValues);
         this.props.onSubmit(formValues)
     };
 

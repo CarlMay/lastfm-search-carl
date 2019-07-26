@@ -9,10 +9,6 @@ import {searchArtist} from '../../actions';
 
 class StreamSearchBrainz extends Component {
 
-    state = {
-        term: '',
-    };
-
     constructor(props) {
         super(props);
         this.onSearchSubmit = this.onSearchSubmit.bind(this);

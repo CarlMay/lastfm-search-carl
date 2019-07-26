@@ -7,17 +7,14 @@ import LastFmArtistList from "../last-fm-artistList";
 
 class StreamSearchLastFM extends Component {
 
-    state = {
-        term: '',
-    };
-
     constructor(props) {
         super(props);
         this.onSearchSubmit = this.onSearchSubmit.bind(this);
     }
 
-    onSearchSubmit(term){
-        this.props.searchLastFmArtist(term);
+    onSearchSubmit(formValues){
+        console.log('---onSearchSubmit::formValues', formValues);
+        this.props.searchLastFmArtist(formValues);
     }
 
     render() {
