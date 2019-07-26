@@ -17,7 +17,7 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case SEARCH_LAST_FM_ARTIST: {
-            const data = action.payload;
+            const data = action.payload.results.artistmatches.artist;
             return {...state, artists: data};
         }
         case ADD_ARTIST_TO_FAVORITES: {

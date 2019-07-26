@@ -19,7 +19,10 @@ import {
 export const searchLastFmArtist = (artist) => async (dispatch) => {
     const key = '850a15314ce90b4721eb773a648ba8bb';
     const response = await lastFm.get(`?method=artist.search&artist=${artist}&api_key=${key}&format=json`);
-    const data = response.data.results.artistmatches.artist;
+
+    // console.log('---response', response);
+    const data = response.data;
+    // const data = response.data.results.artistmatches.artist;
 
     dispatch({
         type: SEARCH_LAST_FM_ARTIST,

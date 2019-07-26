@@ -26,8 +26,9 @@ class StreamSearchBrainz extends Component {
     //     this.setState({artists: response.data.artists});
     // }
 
-    onSearchSubmit(term){
-        this.props.searchArtist(term);
+    onSearchSubmit(formValues){
+        console.log('---onSearchSubmit::formValues', formValues);
+        this.props.searchArtist(formValues);
     }
 
     render() {
