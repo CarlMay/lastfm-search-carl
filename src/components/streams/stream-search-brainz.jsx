@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ContentContainer from "../ui/content-container";
-import SearchBar from '../searchBar';
-import ArtistList from '../artistList';
+import SearchBar from '../shared/searchBar';
+import ArtistList from './components/mindz/artistList';
 
 import {connect} from 'react-redux';
 import {searchArtist} from '../../actions';

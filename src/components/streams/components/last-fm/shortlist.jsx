@@ -6,8 +6,8 @@ import {
     fetchLastFmShortlist,
     removeFromLastFmFavorites,
     fetchLastFmFavorites,
-} from '../actions';
-import StarButton from './ui/star-button';
+} from '../../../../actions';
+import StarButton from '../../../ui/star-button';
 
 
 class ShortList extends Component {

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ContentContainer from "../ui/content-container";
-import ArtistList from '../artistList';
+import ArtistList from './components/mindz/artistList';
 import {connect} from "react-redux";
 import {fetchLastFmFavorites, removeFromLastFmFavorites} from "../../actions";
 

@@ -4,8 +4,8 @@ import {
     searchReleases,
     addToMindzFavorites,
     removeFromMindzFavorites,
-} from '../actions';
-import StarButton from './ui/star-button';
+} from '../../actions';
+import StarButton from '../ui/star-button';
 
 class ReleaseDetails extends Component {
     static defaultProps = {

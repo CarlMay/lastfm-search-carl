@@ -1,5 +1,5 @@
 import React from 'react';
-import ReleaseDetail from './releaseDetails';
+import ReleaseDetail from '../../../shared/releaseDetails';
 
 class ArtistItem extends React.Component {
     state = {

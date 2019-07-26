@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import ContentContainer from '../ui/content-container';
 import {connect} from "react-redux";
 import {searchLastFmArtist, addToLastFmShortlist} from "../../actions";
-import SearchBar from "../searchBar";
-import LastFmArtistList from "../last-fm-artistList";
+import SearchBar from "../shared/searchBar";
+import LastFmArtistList from "./components/last-fm/last-fm-artistList";
 
 class StreamSearchLastFM extends Component {
 
@@ -13,7 +13,7 @@ class StreamSearchLastFM extends Component {
     }
 
     onSearchSubmit(formValues){
-        console.log('---onSearchSubmit::formValues', formValues);
+        // console.log('---onSearchSubmit::formValues', formValues);
         this.props.searchLastFmArtist(formValues);
     }
 
