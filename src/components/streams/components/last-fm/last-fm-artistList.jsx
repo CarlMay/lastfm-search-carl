@@ -5,10 +5,10 @@ import ShortList from './shortlist';
 
 const LastFmArtistList = (props) => {
 
-    const {artists, addToShortlist} = props;
+    const {artists, addToShortlist, removeFromShortlist, shortlist} = props;
 
     const artistData = artists.map((artist, index) => {
-        return <LastFmArtistItem key={index} artists={artist} addToShortlist={addToShortlist}/>;
+        return <LastFmArtistItem key={index} artists={artist} addToShortlist={addToShortlist} removeFromShortlist={removeFromShortlist} shortlist={shortlist}/>;
     });
 
     const headerStyle = {

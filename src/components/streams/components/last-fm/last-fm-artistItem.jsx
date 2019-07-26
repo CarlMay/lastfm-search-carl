@@ -10,18 +10,26 @@ class LastFmArtistItem extends React.Component {
     constructor(props) {
         super(props);
         this.handleAddToShortList = this.handleAddToShortList.bind(this);
+        this.handleRemoveFromShortList = this.handleRemoveFromShortList.bind(this);
     }
 
     handleAddToShortList() {
         this.props.addToShortlist(this.props.artists);
     };
 
+    handleRemoveFromShortList() {
+        console.log('---handleRemoveFromShortList', this.props);
+        this.props.removeFromShortlist(this.props.artists);
+    };
+
     render() {
 
-        const {artists} = this.props;
-        const {name, image } = artists;
+        const {artists, shortlist} = this.props;
+        const {name, image, mbid } = artists;
+        const isInShortList = shortlist.find(item => item.id === mbid);
 
         // console.log('---props', this.props);
+        // console.log('---isInShortList', isInShortList);
         // const accordionText = (isOpen) ? 'Hide' : 'Show';
 
         const listStyle = {
@@ -45,12 +53,22 @@ class LastFmArtistItem extends React.Component {
                 <div className="ui container artist-list" style={listStyle}>
                     <Image src={image[0]["#text"]} size='mini' style={iconStyle}/>
                     <div className="artist-name">{name}</div>
-                    <button
-                        className={'ui circular green icon button'}
-                        onClick={this.handleAddToShortList}
-                    >
-                        <i aria-hidden="true" className="plus icon"></i>
-                    </button>
+                    {!isInShortList &&
+                        <button
+                            className={'ui circular green icon button'}
+                            onClick={this.handleAddToShortList}
+                        >
+                            <i aria-hidden="true" className="plus icon"></i>
+                        </button>
+                    }
+                    {isInShortList &&
+                        <button
+                            className={'ui circular red icon button'}
+                            onClick={this.handleRemoveFromShortList}
+                        >
+                            <i aria-hidden="true" className="minus icon"></i>
+                        </button>
+                    }
                 </div>
             </div>
         );

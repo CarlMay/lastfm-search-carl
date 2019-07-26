@@ -12,6 +12,7 @@ import {
     ADD_ARTIST_TO_FAVORITES,
     ADD_RELEASE_TO_FAVORITES,
     REMOVE_RELEASE_FROM_FAVORITES,
+    REMOVE_ARTIST_FROM_SHORTLIST,
 } from './types';
 
 
@@ -34,6 +35,13 @@ export const searchLastFmArtist = (searchArtist) => async (dispatch) => {
 export const addToLastFmShortlist = (artist) => (dispatch) => {
     dispatch({
         type: ADD_ARTIST_TO_SHORTLIST,
+        payload: artist
+    });
+};
+
+export const removeFromLastFmShortlist = (artist) => (dispatch) => {
+    dispatch({
+        type: REMOVE_ARTIST_FROM_SHORTLIST,
         payload: artist
     });
 };

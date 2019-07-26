@@ -23,7 +23,7 @@ class StreamSearchBrainz extends Component {
     // }
 
     onSearchSubmit(formValues){
-        console.log('---onSearchSubmit::formValues', formValues);
+        // console.log('---onSearchSubmit::formValues', formValues);
         this.props.searchArtist(formValues);
     }
 

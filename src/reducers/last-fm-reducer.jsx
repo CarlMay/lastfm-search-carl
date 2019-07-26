@@ -5,6 +5,7 @@ import {
     FETCH_FAVORITES,
     ADD_ARTIST_TO_FAVORITES,
     REMOVE_ARTIST_TO_FAVORITES,
+    REMOVE_ARTIST_FROM_SHORTLIST,
 } from '../actions/types';
 
 const INITIAL_STATE = {
@@ -62,6 +63,15 @@ export default (state = INITIAL_STATE, action) => {
                         name: name,
                     }
                 ]
+            };
+        }
+        case REMOVE_ARTIST_FROM_SHORTLIST: {
+            const {mbid} = action.payload;
+            const filteredShortlist = state.shortlist.filter(item => item.id !== mbid);
+
+            return {
+                ...state,
+                shortlist: filteredShortlist,
             };
         }
         default:

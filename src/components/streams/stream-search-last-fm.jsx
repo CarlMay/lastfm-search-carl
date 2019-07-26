@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ContentContainer from '../ui/content-container';
 import {connect} from "react-redux";
-import {searchLastFmArtist, addToLastFmShortlist} from "../../actions";
+import {searchLastFmArtist, addToLastFmShortlist, removeFromLastFmShortlist} from "../../actions";
 import SearchBar from "../shared/searchBar";
 import LastFmArtistList from "./components/last-fm/last-fm-artistList";
 
@@ -18,7 +18,7 @@ class StreamSearchLastFM extends Component {
     }
 
     render() {
-        const {artists, addToLastFmShortlist, shortlist} = this.props;
+        const {artists, addToLastFmShortlist, removeFromLastFmShortlist, shortlist} = this.props;
         const hasReleaseData = !!(artists && artists.length > 0);
 
         return (
@@ -27,7 +27,7 @@ class StreamSearchLastFM extends Component {
 
                 <SearchBar onSubmit={this.onSearchSubmit}/>
                 {hasReleaseData &&
-                    <LastFmArtistList artists={artists} addToShortlist={addToLastFmShortlist} shortlist={shortlist} />
+                    <LastFmArtistList artists={artists} addToShortlist={addToLastFmShortlist} removeFromShortlist={removeFromLastFmShortlist} shortlist={shortlist} />
                 }
             </ContentContainer>)
     }
@@ -42,5 +42,9 @@ const mapStateToProps = (state) => {
 
 export default connect(
     mapStateToProps,
-    {searchLastFmArtist, addToLastFmShortlist}
+    {
+        searchLastFmArtist,
+        addToLastFmShortlist,
+        removeFromLastFmShortlist
+    }
 )(StreamSearchLastFM);

@@ -10,7 +10,7 @@ class StreamShowFavorites  extends Component {
         const {favoritesArtists} = this.props;
         const hasFavorites = !!(favoritesArtists && favoritesArtists.length > 0);
 
-        console.log('---favoritesArtists', favoritesArtists);
+        // console.log('---favoritesArtists', favoritesArtists);
         // console.log('---favoriteReleases', favoriteReleases);
 
         return (
