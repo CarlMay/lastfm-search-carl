@@ -24,15 +24,13 @@ class SearchBar extends React.Component {
     renderSearch = ({input, meta}) => {
         // console.log('---meta', meta);
         const classNameStr = `ui action input ${(meta.error && meta.touched) ? 'error' : ''}`;
+        const {pristine, reset, submitting } = this.props;
 
         return (
             <div className={classNameStr}>
-                <input {...input} autoComplete={'off'} />
-                {/*<input {...input} />*/}
+                <input {...input} autoComplete={'off'} placeholder={'Search...'} />
                 {this.setValidationError(meta)}
-                {/*<i aria-hidden="true" className="spinner right icon"></i>*/}
-
-                <button className={'ui icon button'}>
+                <button className={'ui icon button'}  disabled={submitting}>
                     <i aria-hidden="true" className="search icon"></i>
                 </button>
             </div>
@@ -70,7 +68,6 @@ class SearchBar extends React.Component {
                         name="searchText"
                         component={this.renderSearch}
                         type="text"
-                        placeholder={'Search...'}
                     />
                 </div>
                 {this.renderValidationError()}
@@ -81,7 +78,6 @@ class SearchBar extends React.Component {
 
 const validate = (formValues) => {
     const errors = {};
-    // console.log('---validate formValues', formValues);
 
     if (!formValues.searchText) {
         errors.searchText = 'You must enter an artist to search for!';

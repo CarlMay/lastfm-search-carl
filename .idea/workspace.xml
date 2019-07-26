@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f4289a07-09d4-48d3-a51c-96d8e3ad502c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/types.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/streams/components/last-fm/last-fm-artistItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/streams/components/last-fm/last-fm-artistItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/streams/components/last-fm/last-fm-artistList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/streams/components/last-fm/last-fm-artistList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/streams/stream-search-brainz.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/streams/stream-search-brainz.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/releaseDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/releaseDetails.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/searchBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/searchBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/streams/components/mindz/artistItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/streams/components/mindz/artistItem.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,61 +17,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/streams/components/last-fm/last-fm-artistList.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/streams/components/last-fm/last-fm-artistItem.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>handleAddToShortList</find>
-      <find>removeFromFavorites</find>
       <find>toggleSelected</find>
       <find>--favorites</find>
       <find>---favorites</find>
@@ -84,6 +29,8 @@
       <find>ADD_ARTIST_TO_SHORTLIST</find>
       <find>favoritesArtists</find>
       <find>---onSearchSubmit::formValues</find>
+      <find>removeFromFavorites</find>
+      <find>Loading...</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -122,16 +69,18 @@
         <option value="$PROJECT_DIR$/src/components/artistList.jsx" />
         <option value="$PROJECT_DIR$/src/components/releaseDetails.jsx" />
         <option value="$PROJECT_DIR$/src/components/searchBar.jsx" />
-        <option value="$PROJECT_DIR$/src/components/shared/releaseDetails.jsx" />
-        <option value="$PROJECT_DIR$/src/components/streams/components/mindz/artistList.jsx" />
-        <option value="$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx" />
-        <option value="$PROJECT_DIR$/src/components/streams/stream-search-brainz.jsx" />
-        <option value="$PROJECT_DIR$/src/actions/index.jsx" />
         <option value="$PROJECT_DIR$/src/actions/types.jsx" />
         <option value="$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx" />
         <option value="$PROJECT_DIR$/src/components/streams/components/last-fm/last-fm-artistList.jsx" />
         <option value="$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx" />
         <option value="$PROJECT_DIR$/src/components/streams/components/last-fm/last-fm-artistItem.jsx" />
+        <option value="$PROJECT_DIR$/src/components/streams/components/mindz/artistList.jsx" />
+        <option value="$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx" />
+        <option value="$PROJECT_DIR$/src/actions/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/shared/searchBar.jsx" />
+        <option value="$PROJECT_DIR$/src/components/streams/components/mindz/artistItem.jsx" />
+        <option value="$PROJECT_DIR$/src/components/streams/stream-search-brainz.jsx" />
+        <option value="$PROJECT_DIR$/src/components/shared/releaseDetails.jsx" />
       </list>
     </option>
   </component>
@@ -158,64 +107,6 @@
               <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
               <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="streams" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="streams" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="streams" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="last-fm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="streams" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="mindz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lastfm-search-carl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lastfm-search-carl" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -277,7 +168,7 @@
       <updated>1563265528135</updated>
       <workItem from="1563265529614" duration="836000" />
       <workItem from="1563269229805" duration="126742000" />
-      <workItem from="1564059294741" duration="29756000" />
+      <workItem from="1564059294741" duration="36766000" />
     </task>
     <task id="LOCAL-00001" summary="feat: routing scaffolding.">
       <created>1563274225974</created>
@@ -440,15 +331,28 @@
       <option name="project" value="LOCAL" />
       <updated>1564139984706</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="feat: added functionality to remove artists form shortlist.">
+      <created>1564143346384</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1564143346384</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat: added functionality to remove artists form favorites.">
+      <created>1564146296341</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1564146296341</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157334000" />
+    <option name="totallyTimeSpent" value="164344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15226555" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -476,8 +380,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="style: styled nav and header." />
-    <MESSAGE value="feat: created content container, search bar, release item and release list components.&#10;chore: wired up the media minds api.&#10;style: search response and content." />
     <MESSAGE value="feat: wired up redux.&#10;chore: created actions, reducer and artist search.&#10;chore: refactored components to accommodate redux." />
     <MESSAGE value="feat: wired up redux.&#10;chore: created actions, reducer and artist search.&#10;chore: refactored components to accommodate redux.&#10;chore: code cleanup." />
     <MESSAGE value="feat: added release api - checkpoint." />
@@ -501,7 +403,9 @@
     <MESSAGE value="fix: last.fm artist search term after reducer change&#10;none: code cleanup - checkpoint." />
     <MESSAGE value="chore: refactor components into component folders." />
     <MESSAGE value="fix: unable multiple artist's to the shortlist." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: unable multiple artist's to the shortlist." />
+    <MESSAGE value="feat: added functionality to remove artists form shortlist." />
+    <MESSAGE value="feat: added functionality to remove artists form favorites." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added functionality to remove artists form favorites." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/components/streams/index.jsx">
@@ -581,16 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ui/star-button.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -632,26 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shared/searchBar.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shared/releaseDetails.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="129" column="15" selection-start-line="129" selection-start-column="15" selection-end-line="129" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -665,43 +539,6 @@
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/mindz-reducer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/streams/components/mindz/artistItem.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/streams/components/mindz/artistList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/streams/stream-search-brainz.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -727,30 +564,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/streams/components/last-fm/last-fm-artistList.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="32" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -759,10 +576,100 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/streams/components/last-fm/last-fm-artistItem.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="360">
+          <caret line="54" column="59" lean-forward="true" selection-start-line="54" selection-start-column="59" selection-end-line="54" selection-end-column="59" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/streams/stream-search-last-fm.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/shared/searchBar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1448">
+          <caret line="80" column="4" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/streams/stream-show-favorite.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/streams/components/mindz/artistItem.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="54" column="27" lean-forward="true" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/mindz-reducer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="104" column="24" lean-forward="true" selection-start-line="104" selection-start-column="24" selection-end-line="104" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/streams/components/mindz/artistList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/streams/stream-search-brainz.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/shared/releaseDetails.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="58" column="13" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="58" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -48,9 +48,15 @@ class ReleaseDetails extends Component {
         const {favoriteReleases, ArtistReleases, artistId} =this.props;
         const releases = ArtistReleases[artistId];
 
+        const loaderStyle = {
+            marginBottom: '1rem',
+        };
+
         //TODO: fix this!
         if (!releases || releases.length === 0) {
-            return (<div>Loading...</div>)
+            return (
+                <div className="ui centered active inline loader" style={loaderStyle}></div>
+            )
         }
 
 

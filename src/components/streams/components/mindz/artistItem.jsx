@@ -51,7 +51,8 @@ class ArtistItem extends React.Component {
         };
 
         const buttonStyle = {
-            marginTop: '0.65rem',
+            marginTop: '0.85rem',
+            padding: '4px',
         };
 
         return (
