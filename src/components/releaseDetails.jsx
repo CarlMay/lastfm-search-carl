@@ -87,8 +87,6 @@ class ReleaseDetails extends Component {
                         <div className="three wide column" style={rowStyle}>{tracks}</div>
                     </div>
                 );
-
-
             })
         );
     }
