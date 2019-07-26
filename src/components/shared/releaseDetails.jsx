@@ -52,7 +52,6 @@ class ReleaseDetails extends Component {
             marginBottom: '1rem',
         };
 
-        //TODO: fix this!
         if (!releases || releases.length === 0) {
             return (
                 <div className="ui centered active inline loader" style={loaderStyle}></div>
