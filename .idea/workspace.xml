@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4289a07-09d4-48d3-a51c-96d8e3ad502c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/last-fm-reducer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,7 @@
       <workItem from="1595494748929" duration="75000" />
       <workItem from="1595591547251" duration="3361000" />
       <workItem from="1596105417720" duration="116000" />
-      <workItem from="1596527455912" duration="958000" />
+      <workItem from="1596527455912" duration="1607000" />
     </task>
     <task id="LOCAL-00001" summary="feat: routing scaffolding.">
       <created>1563274225974</created>
@@ -281,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564150683113</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fix: escaped unescaped value.">
+      <created>1596529406429</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1596529406429</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +294,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: added release api - checkpoint." />
     <MESSAGE value="fix: release api endpoint.&#10;fix: release list styling.&#10;feat: refactored list and props for release.&#10;none: checkpoint." />
     <MESSAGE value="fix: release api endpoint.&#10;fix: release list styling.&#10;feat: refactored list and props for release.&#10;none: linter.&#10;none: checkpoint." />
     <MESSAGE value="fix: misaligned imports." />
@@ -314,9 +318,14 @@
     <MESSAGE value="feat: added functionality to remove artists form favorites." />
     <MESSAGE value="chore: loaded styling.&#10;chore: disabled search on submit." />
     <MESSAGE value="chore: code cleanup.&#10;none: checkpoint - 1st release." />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: code cleanup.&#10;none: checkpoint - 1st release." />
+    <MESSAGE value="fix: escaped unescaped value." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: escaped unescaped value." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="205" y="97" width="1537" height="917" key="CommitChangelistDialog2" timestamp="1596529405308">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="205" y="97" width="1537" height="917" key="CommitChangelistDialog2/0.40.1920.1040@0.40.1920.1040" timestamp="1596529405308" />
     <state x="740" y="314" key="FileChooserDialogImpl" timestamp="1595494821671">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
