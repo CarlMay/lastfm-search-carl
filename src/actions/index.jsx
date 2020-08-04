@@ -18,6 +18,12 @@ import {
 
 // Last.fm API
 export const searchLastFmArtist = (searchArtist) => async (dispatch) => {
+
+    // https://api.foursquare.com/v2/venues/search?ll=40.7484,-73.9857&categoryId=4d4b7105d754a06374d81259&radius=100&limit=5&client_id=X&client_secret=X&v=.
+    // 0VZCC5ROXEM52CRE5Q4VMZZCPRRLPVT0HABHL0UUOLVSEBXC
+    // 5KISIBY0CLV1OR2EFXB2LQ2C1C1XGPLUZKSDLZXJV4ZZR13G
+
+
     const key = '850a15314ce90b4721eb773a648ba8bb';
     const {searchText:artist} = searchArtist;
     const response = await lastFm.get(`?method=artist.search&artist=${artist}&api_key=${key}&format=json`);

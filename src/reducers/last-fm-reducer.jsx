@@ -52,7 +52,7 @@ export default (state = INITIAL_STATE, action) => {
             const isDuplicate = !!(state.shortlist.find(item => item.id === mbid));
 
 
-            if(isDuplicate) return state;
+            if (isDuplicate) return state;
 
             return {
                 ...state,
